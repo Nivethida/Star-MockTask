@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        #mainDiv{
+            height: 300px;
+            width: 320px;
+            border: 1px solid black;
+        }
+        .star{
+            float: left;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="mainDiv">
+
+</div>
+<script>
+$(document).ready(function(){
+    for(var i=0; i<10; i++){
+        for(var j=0; j<10; j++){
+            var stars = $("<p class='star'><span onclick=\"this.style.color='red'\">&#9734</span></p>");
+            stars.appendTo("#mainDiv");
+        }
+    }
+});
+
+</script>
+</body>
+</html>
